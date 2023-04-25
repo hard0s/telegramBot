@@ -1,0 +1,39 @@
+ markup_reply = types.ReplyKeyboardMarkup(resize_keyboard= True)
+            item_ID = types.KeyboardButton('MY ID')
+            markup_reply.add(item_ID)
+            bot.send_message(call.message.chat.id, "выбранна группа СисАдм 2/1", reply_markup = markup_reply)
+        elif call.data == "isip":
+                bot.send_message(call.message.chat.id,"выбранна группа ИСиП(п)2/3")
+        elif call.data == "ksk":
+            a = "выбранна группа КСК 2/28"
+            bot.send_message(call.message.chat.id, a)
+            bot.delete_message(call.message.chat.id, message.id)
+
+
+
+
+'''
+    match (message.text):
+        case 'MY ID':
+            bot.send_message(message.chat.id, f"твой id: {message.from_user.id}", parse_mode='html')
+        case 'Привет':
+            bot.send_message(message.chat.id, "Привет", parse_mode='html')
+        case 'Id':
+            bot.send_message(message.chat.id, f"твой id: {message.from_user.id}", parse_mode='html')
+        case "Неделя":
+            bot.send_message(message.chat.id, config.read6, parse_mode='html')
+        case "Понедельник":
+            bot.send_message(message.chat.id, config.read1, parse_mode='html')
+        case "Вторник":
+            bot.send_message(message.chat.id, config.read2, parse_mode='html')
+        case "Среда":
+            bot.send_message(message.chat.id, config.read3, parse_mode='html')
+        case "Четверг":
+            bot.send_message(message.chat.id, config.read4, parse_mode='html')
+        case "Пятница":
+            bot.send_message(message.chat.id, config.read5, parse_mode='html')
+        case "Я есть величие":
+            bot.send_message(message.chat.id,"Здравствуйте ваше величиство темный лорд ", parse_mode='html')
+        case _ :
+            bot.send_animation(message.chat.id, config.unknown)
+'''
